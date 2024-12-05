@@ -1,0 +1,31 @@
+Log Analysis Report
+Generated on: 2024-12-05 12:01:06
+
+MOST ACCESSED ENDPOINT
+Endpoint,Access Count
+/login,663
+
+ALL ACCESSED ENDPOINTS
+Endpoint,Access Count
+/login,663
+/home,255
+/about,255
+/dashboard,153
+/contact,102
+/register,102
+/profile,102
+/feedback,102
+
+SUSPICIOUS ACTIVITY
+IP Address,Failed Login Count
+203.0.113.5,408
+192.168.1.100,255
+
+401 ERRORS WITH INVALID CREDENTIALS
+Total 401 Errors
+663
+
+ADDITIONAL INSIGHTS
+Total Unique IPs,5
+Total Unique Endpoints,8
+Total Requests,1734
