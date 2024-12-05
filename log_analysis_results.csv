@@ -1,0 +1,25 @@
+Log Analysis Report
+Generated on: 2024-12-05 11:48:33
+
+Most Accessed Endpoint
+Endpoint,Access Count
+/feedback,2
+
+All Accessed Endpoints
+Endpoint,Access Count
+/login,13
+/home,5
+/about,5
+/dashboard,3
+/contact,2
+/register,2
+/profile,2
+/feedback,2
+
+Suspicious Activity
+IP Address,Failed Login Count
+No suspicious activity detected.
+
+401 Errors with Invalid Credentials
+Count
+13
