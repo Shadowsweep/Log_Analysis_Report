@@ -140,8 +140,8 @@ def generate_log_analysis_csv(file_path, output_file):
     print(f"\nDetailed log analysis saved to '{output_file}'. Analysis complete.")
 
 # Example usage
-file_path = 'sample_test.log'  # Replace with the path to your log file
-output_file = 'test_log_analysis_report.csv'
+file_path = 'sample.log'  # Replace with the path to your log file
+output_file = 'Slog_analysis_report.csv'
 
 # Run the analysis
 generate_log_analysis_csv(file_path, output_file)

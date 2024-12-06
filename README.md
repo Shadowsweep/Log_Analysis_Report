@@ -9,7 +9,7 @@
 
 
 ## Apart from assisment i had tried to test for suspicious activity 
-1. after that saved the report in test_log_analysis.csv with terminal printing 
+1. after that saved the report in test_log_analysis.csv with terminal printing , Where output file: test_log_analysis_report.csv ,and input file : sample_test.log
 
 
 
@@ -54,3 +54,4 @@ Imagine you run a website:
 - Track unauthorized access attempts
 - Monitor login failure patterns
 
+## Terminal results - 
