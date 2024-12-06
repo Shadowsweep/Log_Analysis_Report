@@ -1,5 +1,5 @@
 
-### Log analysis Report 
+# Log analysis Report 
 
 ## The tasks we had Completed in this script are -
 1. To parse the log file and idetify the status codes used ,the    endpoints accessed in our sample.log file.
@@ -55,3 +55,4 @@ Imagine you run a website:
 - Monitor login failure patterns
 
 ## Terminal results - 
+![image](https://github.com/user-attachments/assets/e7cd9d3e-7d9c-4421-9e2b-3cc6d219bbce)
