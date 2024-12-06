@@ -1,5 +1,18 @@
 
-## Log analysis Report 
+### Log analysis Report 
+
+## The tasks we had Completed in this script are -
+1. To parse the log file and idetify the status codes used ,the    endpoints accessed in our sample.log file.
+2. After that we search the string and extract spcific parts and used .group to get powerful extraction we need .
+3. After that we implemented most common so that we can get the highest no. of the times the endpoints which has been acessed 
+4. And then we converted the code and returned in csv file
+
+
+## Apart from assisment i had tried to test for suspicious activity 
+1. after that saved the report in test_log_analysis.csv with terminal printing 
+
+
+
 
 
 ### Step-by-Step Process
@@ -14,7 +27,7 @@
 Imagine you run a website:
 - The script reads your log file
 - It tells you:
-  * Most visited page: "/homepage"
+  * Most visited page: "/login"
   * Most active IP: "192.168.1.100"
   * Suspicious attempts: 15 failed logins from "123.45.67.89"
 ```

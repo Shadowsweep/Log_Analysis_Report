@@ -3,16 +3,36 @@ import csv
 from collections import Counter, defaultdict
 from datetime import datetime
 
-# Define threshold for suspicious activity
-FAILED_LOGIN_THRESHOLD = 10
+# Importing Libraries for our code as - 
+"""
+    1. Re - For handling Regular Expressions inside our code 
+    2. csv - to convert and set elements in rows and columns
+    3. Collections Library  - In this we used Counter Fro counting hashable objects. For ip address and endpoints
+"""
+
+#  First Define threshold for suspicious activity as given in assignment to create a flag for sus activity
+
+FAILED_USER_LOGIN_THRESHOLD = 10
 
 # Regular expression to parse log lines
 log_pattern = re.compile(
     r'(?P<ip>\d+\.\d+\.\d+\.\d+).*?"(?P<method>GET|POST|PUT|DELETE|HEAD) (?P<endpoint>/\S*).*?" (?P<status>\d{3}).*?(Invalid credentials)?'
 )
 
+"""
+In this log pattern we can understand it in sections as -
+1. To capture ip address we used : (?P<ip>\d+\.\d+\.\d+\.\d+)
+2. to find method we used : (?P<method>GET|POST|PUT|DELETE|HEAD)
+3. To find endpoints we used : (?P<endpoint>/\S*)
+4. To find status code we used - (?P<status>\d{3})
+5. To check Invalid Credentials we used - .*?(Invalid credentials)?
+"""
+
+# In this Function we initialize our data and then converted into CSV Format 
+
+
 def generate_log_analysis_csv(file_path, output_file):
-    # Data structures for analysis
+    # Data structures for analysis By giving Counter to it 
     request_counts = Counter()
     endpoint_counts = Counter()
     failed_logins = defaultdict(int)
@@ -34,7 +54,7 @@ def generate_log_analysis_csv(file_path, output_file):
                 endpoint = match.group('endpoint')
                 status = int(match.group('status'))
                 invalid_creds = match.group(4)
-
+                
                 # Count requests per IP and endpoints
                 request_counts[ip] += 1
                 endpoint_counts[endpoint] += 1
@@ -50,7 +70,8 @@ def generate_log_analysis_csv(file_path, output_file):
     print("Processing parsed data...")
     most_accessed_endpoints = endpoint_counts.most_common()
     highest_endpoint = most_accessed_endpoints[0] if most_accessed_endpoints else None
-    suspicious_ips = {ip: count for ip, count in failed_logins.items() if count > FAILED_LOGIN_THRESHOLD}
+    #Here we are suing List comprehension to check , count failed logins  also highest no. of endpoint accessed
+    suspicious_ips = {ip: count for ip, count in failed_logins.items() if count > FAILED_USER_LOGIN_THRESHOLD}
     print(f"Identified most accessed endpoint: {highest_endpoint}")
     print(f"Detected {len(suspicious_ips)} suspicious IPs exceeding login failure threshold.\n")
 
